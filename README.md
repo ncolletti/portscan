@@ -12,12 +12,21 @@ python3 -m http.server $(./portscan -pn 6666 -n)
 node http-server -p $(./portscan -p 6666 -n)
 ```
 
-## How to build
+## How to build from source
 ```
 $ git clone https://github.com/ncolletti/portscan
 $ cd portscan
 $ export GO111MODULE=on
 $ go build
+
+```
+
+## How to run binary from any location
+```
+$ mkdir ~/bin
+$ mv portscan ~/bin
+BASH: export PATH=$PATH:/home/<user>/bin
+ZSH: path+=('/home/<user>/bin')
 ```
 
 ## How to use
