@@ -8,7 +8,7 @@ Using `portscan` you can quickly confirm availability right away for a desired p
 
 You can also pipe the results through to a command by using the -n flag to ensure an open port returns. Useful for automated scripts to launch processes.
 ```
-python3 -m http.server $(./portscan -pn 6666 -n)
+python3 -m http.server $(./portscan -p 6666 -n)
 node http-server -p $(./portscan -p 6666 -n)
 ```
 
@@ -31,7 +31,7 @@ ZSH: path+=('/home/<user>/bin')
 
 ## How to use
 ```
-Usage: portscan -p 8888 -n -nt tcp6
+Usage: portscan -p 8888 -n -v
 
 portscan -p - port - Port to check if available
 portscan -n - next - Return next available closest port

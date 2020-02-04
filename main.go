@@ -104,7 +104,7 @@ func checkPortIsAvailable(s ScanConfig) (string, error) {
 			}
 			i++
 			s.port = strconv.Itoa(i)
-			fmt.Fprintf(os.Stdout, "Checking next port %q", s.port)
+			fmt.Fprintf(os.Stdout, "Checking for next available")
 			return checkPortIsAvailable(s)
 		}
 		return "", err
